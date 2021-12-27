@@ -24,47 +24,43 @@
 </head>
 
 <body>
-    <header>
-        <div class="navigation">
-          <div class="container-fluid top-navigation">
-            <div class="row">
-              <nav class="navbar fixed-to navbar-expand-lg navbar-light">
-                <div class="container">
-                  <span class="head-shape"></span>
-                  <a class="navbar-brand" href="#">
-                    <img class="logo-img" src="images/3mudichu-logo.png">
-                  </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="navbar-collapse nav-content-links collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav-content">
-                      <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                      </li>
-                      
-                    </ul>
-                    <form class="login-button">
-                        <a class="btn log-in" type="submit" href="login.html">login</a>
-                      <a class="btn header-btn" type="submit" href="signup.html">Signup</a>
-                      
-                    </form>
-                  </div>
-    
-                </div>
-              </nav>
-            </div>
-          </div>
+  <header>
+    <div class="navigation">
+      <div class="container-fluid top-navigation">
+        <div class="row">
+          <div class="header">
+            <div class="container">
+              <div class="menu-logo-header">    
+              <a class="logo-brand" href="index.html">
+                <img class="logo-img" src="images/3mudichu-logo.png">
+              </a>
+             <div class="nav-icon cross">
+              <div class="span"></div>
+              </div>
+            
+                <ul class="nav-content">    
+                      <div class="inner">
+                          <li><a class="nav-link active" href="index.html">Home</a></li>
+                          <li><a class="nav-link" href="about.html">About Us</a></li>
+                          <li><a class="nav-link" href="contact.html">Contact</a></li>
+                          <li><form class="login-button">
+                            <a class="btn log-in" type="submit" href="login.html">login</a>
+                          <a class="btn header-btn" type="submit" href="signup.html">signup</a>
+                          
+                        </form>  </li>
+                      </div>  
+                                
+                </ul>
+              </div>
+                
+                  
         </div>
-      </header>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
 
       <section id="abt-banner">
           <div class="container abt-bann-box">
@@ -247,5 +243,47 @@
       </footer>
 
 
+
+
+
+
+
+
+      <script src="bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin=" anonymous " referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin=" anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/wow.min.js"></script>
+      <script>
+        $(document).ready(function(){
+      $(".nav-icon").click(function(){
+        $("ul.nav-content").toggleClass("open");
+        
+      });
+    });
+    $(function(){
+     var obj = document.querySelectorAll('.nav-icon');
+      for(var i = obj.length -1;i>=0;i--){
+        var toggle = obj[i];
+        toggleactive(toggle);
+      }
+      
+      function toggleactive(toggle) {
+      toggle.addEventListener("click",function() {
+        
+        if(this.classList.contains("active") === true) {
+        this.classList.remove("active");
+        }
+        else {
+        this.classList.add("active");
+        }
+      });
+      }
+    });
+      </script>
 </body>
 </html>

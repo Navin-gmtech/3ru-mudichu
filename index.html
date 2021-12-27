@@ -25,7 +25,7 @@
 
 <body>
   <!--menu_bar-->
-  <header>
+  <!-- <header>
     <div class="navigation">
       <div class="container-fluid top-navigation">
         <div class="row">
@@ -33,13 +33,13 @@
           <nav class="navbar fixed-to navbar-expand-lg navbar-light">
             <div class="container">
               <span class="head-shape"></span>
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="index.html">
                 <img class="logo-img" src="images/3mudichu-logo.png">
               </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-              <div class="collapse navbar-collapse nav-content-links " id="navbarScroll">
+             
+        <div id="btn-menu-responsive" class="btn-menu" data-bs-toggle="collapse" data-bs-target="#btn-menu-responsive" aria-controls="btn-menu-responsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></div>
+      
+              <div class="collapse navbar-collapse nav-content-links " id="btn-menu-responsive">
                 <ul class="navbar-nav nav-content">
                   <li class="nav-item">
                     <a class="nav-link active" href="index.html">Home</a>
@@ -64,15 +64,75 @@
         </div>
       </div>
     </div>
+  </header> -->
+  <header>
+    <div class="navigation">
+      <div class="container-fluid top-navigation">
+        <div class="row">
+          <div class="header">
+            <div class="container">
+              <div class="menu-logo-header">    
+              <a class="logo-brand" href="index.html">
+                <img class="logo-img" src="images/3mudichu-logo.png">
+              </a>
+             <div class="nav-icon cross">
+              <div class="span"></div>
+              </div>
+            
+                <ul class="nav-content">    
+                      <div class="inner">
+                          <li><a class="nav-link active" href="index.html">Home</a></li>
+                          <li><a class="nav-link" href="about.html">About Us</a></li>
+                          <li><a class="nav-link" href="contact.html">Contact</a></li>
+                          <li><form class="login-button">
+                            <a class="btn log-in" type="submit" href="login.html">login</a>
+                          <a class="btn header-btn" type="submit" href="signup.html">signup</a>
+                          
+                        </form>  </li>
+                      </div>  
+                                
+                </ul>
+              </div>
+                
+                  
+        </div>
+        </div>
+          
+        </div>
+      </div>
+    </div>
   </header>
 
-
+  <!-- <div class="header">
+    <div class="container">
+          
+      <a class="navbar-brand" href="index.html">
+        <img class="logo-img" src="images/3mudichu-logo.png">
+      </a>
+     <div class="nav-icon cross">
+      <div class="span"></div>
+      </div>
+        <ul>    
+              <div class="inner">
+                  <li><a class="nav-link active" href="index.html">Home</a></li>
+                  <li><a class="nav-link" href="about.html">About Us</a></li>
+                  <li><a class="nav-link" href="contact.html">Contact</a></li>
+              </div>              
+        </ul>
+        <form class="login-button">
+          <a class="btn log-in" type="submit" href="login.html">login</a>
+        <a class="btn header-btn" type="submit" href="signup.html">signup</a>
+        
+      </form>
+          
+</div>
+</div> -->
   
   <section id="banner-sec">
     <div class="container banner-head">
       <div class="row">
         <div class="col-md-6 banner-left">
-          <div class="container">
+          <div class="container wow animate fadeInLeft">
           <div class="row">
               <div class="banner-left-head">
                 <h1><strong>Moondru Mudichu</strong><br>Matrimony</h1>
@@ -83,7 +143,7 @@
         </div>
         </div>
         <div class="col-md-6 banner-right">
-          <div class="">
+          <div class="wow animate fadeInDown">
             <div class="row">
               <div class="col-md-6 banner-img-1">
                 <div class="banner-right"><img  src="images/banner-1.png"></div>
@@ -110,7 +170,7 @@
             <img src="images/abt-img-2.png">
           </div>
         </div>
-        <div class="col-md-6 about-right">
+        <div class="col-md-6 about-right wow animate fadeInRight">
           <h2>Why<br>Choose US</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestiae rerum, reiciendis unde omnis commodi amet quae aut, natus, quod modi beatae vel! Suscipit error, nam veritatis assumenda in, iure architecto id voluptate fugit dolorum sequi vel nemo eveniet fuga.</p>
           <button class="btn outline">Read More</button>
@@ -659,6 +719,33 @@
       }
     })
 
+  </script>
+  <script>
+    $(document).ready(function(){
+	$(".nav-icon").click(function(){
+		$("ul.nav-content").toggleClass("open");
+		
+	});
+});
+$(function(){
+ var obj = document.querySelectorAll('.nav-icon');
+  for(var i = obj.length -1;i>=0;i--){
+	  var toggle = obj[i];
+	  toggleactive(toggle);
+  }
+  
+  function toggleactive(toggle) {
+	toggle.addEventListener("click",function() {
+	  
+	  if(this.classList.contains("active") === true) {
+		this.classList.remove("active");
+	  }
+	  else {
+		this.classList.add("active");
+	  }
+	});
+  }
+});
   </script>
   <script>
     new WOW().init();
