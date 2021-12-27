@@ -1,4 +1,5 @@
 {
     "git.allowForcePush": true,
-    "git.enableCommitSigning": true
+    "git.enableCommitSigning": true,
+    "liveServer.settings.port": 5501
 }
