@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moondru Mudichu</title>
+  <link rel="stylesheet" href="bootstrap-5.1.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+</head>
+
+<body>
+    <section id="login-page">
+        <div class="container login-page-box">
+            <div class="row">
+                <div class="login-left col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <img src="images/3mudichu-logo.png">
+                    
+                    <form class="form-sec" method="post" id="login-form">
+                        <h6>Login</h6>
+                        <div class="form-group">
+                          <input type="Name" class="form-control" id="username" placeholder="username" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="password" name="name">
+                          </div>
+                          <div class="form-group">
+                            <button class="btn outline">Login</button>
+                          </div>
+                    </form>
+                    <small>Don’t have an account? <a class="register-btn" href="signup.html">Get Started</a></small>
+                </div>
+                <div class="login-right col-xl-6  col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="login-right-content">
+                            <h2>Select your life partner by one click, explore beautiful world!</h2>
+                            <div class="owl-carousel owl-theme login-scroll-right">
+                                <div class="item">
+                                    <img src="images/login-scroll-1.png">
+                              </div>
+                              <div class="item">
+                                <img src="images/groom-1.png">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin=" anonymous " referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin=" anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/wow.min.js"></script>
+
+  <script type="text/javascript">
+
+    $('.astro-scroll').owlCarousel({
+      loop:true,
+      nav:false,
+      margin:10,
+      autoplay:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:3
+          }
+      }
+    })
+
+    $('.bride-scroll-left,.groom-scroll-left').owlCarousel({
+      loop:true,
+      nav:false,
+      margin:10,
+      autoplay:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+    })
+    $('.bride-scroll-right,.groom-scroll-right').owlCarousel({
+      loop:true,
+      nav:false,
+      margin:10,
+      dots:false,
+      autoplay:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+    })
+
+    $('.login-scroll-right').owlCarousel({
+      loop:true,
+      nav:false,
+      margin:10,
+      dots:false,
+      autoplay:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+    })
+
+  </script>
+  <script>
+    $(document).ready(function(){
+	$(".nav-icon").click(function(){
+		$("ul.nav-content").toggleClass("open");
+		
+	});
+});
+$(function(){
+ var obj = document.querySelectorAll('.nav-icon');
+  for(var i = obj.length -1;i>=0;i--){
+	  var toggle = obj[i];
+	  toggleactive(toggle);
+  }
+  
+  function toggleactive(toggle) {
+	toggle.addEventListener("click",function() {
+	  
+	  if(this.classList.contains("active") === true) {
+		this.classList.remove("active");
+	  }
+	  else {
+		this.classList.add("active");
+	  }
+	});
+  }
+});
+  </script>
+  <script>
+    new WOW().init();
+    </script>
+
+</body>
+</html>
